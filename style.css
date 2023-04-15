@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root{
+    /*color*/
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+
+    /*fonts*/
+    --Font-Family: 'Manrope', sans-serif;
+    --Font-Size: 1.2rem;
+    --Font-Size-Quote: 28px;
+    --Font-Weight: 800px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Dark-Blue);
+    font-family: var(--Font-Family);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    background-color: var(--Dark-Grayish-Blue);
+    padding: 50px;
+    width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+h1 {
+    color: var(--Neon-Green);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: var(--Font-Size);
+}
+
+#advice {
+    color: var(--Light-Cyan);
+    text-align: center;
+    font-weight: var(--Font-Weight);
+    margin: 20px 0;
+}
+#advice::before{
+    content: open-quote;
+}
+#advice::after{
+    content: close-quote;
+}
+
+#pattren-mobile {
+    display: none;
+}
+
+#pattren-desktop {
+    width: 100%;
+}
+
+#dice {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: var(--Neon-Green);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    transform: translateX(-50%);
+}
+#dice:hover{
+    background-color:hsl(148, 73%, 84%);
+}
+#dice >img{
+    width: 70%;
+    height: 70%;
+}
+
+@media screen and (max-width: 550px) {
+:root {
+    --Font-Size: .8rem;
+    --Font-size-quote: 20px;
+}
+
+h1 {
+    font-size: .9rem;
+}
+
+.container {
+    width: 90%;
+    padding: 30px 0;
+}
+
+#dice {
+    width: 40px;
+    height: 40px;
+}
+
+#dice > img {
+    width: 60%;
+    height: 60%;
+}
+
+#pattern-desktop {
+    display: none;
+}
+
+#pattern-mobile {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+}
